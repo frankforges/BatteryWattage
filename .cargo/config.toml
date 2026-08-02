@@ -1,0 +1,5 @@
+# Statically link the MSVC runtime so the released .exe is genuinely
+# standalone. Without this the binary imports VCRUNTIME140.dll, which ships
+# with the Visual C++ Redistributable rather than with Windows itself.
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
