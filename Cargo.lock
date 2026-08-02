@@ -3,6 +3,14 @@
 version = 4
 
 [[package]]
+name = "battery-wattage"
+version = "0.1.0"
+dependencies = [
+ "windows",
+ "winres",
+]
+
+[[package]]
 name = "proc-macro2"
 version = "1.0.107"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -85,14 +93,6 @@ name = "unicode-ident"
 version = "1.0.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"
-
-[[package]]
-name = "wattage-monitor"
-version = "0.1.0"
-dependencies = [
- "windows",
- "winres",
-]
 
 [[package]]
 name = "windows"

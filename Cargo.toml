@@ -1,7 +1,13 @@
 [package]
-name = "wattage-monitor"
+name = "battery-wattage"
 version = "0.1.0"
 edition = "2021"
+
+# Crate stays kebab-case per Rust convention; the shipped executable is
+# PascalCase to match Windows tooling (CoreTemp.exe, HWiNFO64.exe).
+[[bin]]
+name = "BatteryWattage"
+path = "src/main.rs"
 
 [dependencies]
 windows = { version = "0.58", features = [

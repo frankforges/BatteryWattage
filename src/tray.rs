@@ -19,7 +19,7 @@ const UID: u32 = 1;
 /// Create the tray icon. Returns Ok(()) if the icon was added successfully.
 pub fn create(hwnd: HWND) -> Result<()> {
     let mut tip = [0u16; 128];
-    let src: Vec<u16> = "Wattage Monitor\0".encode_utf16().collect();
+    let src: Vec<u16> = "BatteryWattage\0".encode_utf16().collect();
     let len = src.len().min(128);
     tip[..len].copy_from_slice(&src[..len]);
 
@@ -322,4 +322,4 @@ pub fn set_startup(enable: bool) {
 }
 
 const RUN_KEY: &str = "Software\\Microsoft\\Windows\\CurrentVersion\\Run\0";
-const VALUE_NAME: &str = "WattageMonitor\0";
+const VALUE_NAME: &str = "BatteryWattage\0";

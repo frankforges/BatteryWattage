@@ -11,7 +11,7 @@ use windows::Win32::Graphics::Gdi::*;
 use windows::Win32::UI::Shell::NIN_SELECT;
 use windows::Win32::UI::WindowsAndMessaging::*;
 
-const WINDOW_CLASS: &str = "WattageMonitorWindow";
+const WINDOW_CLASS: &str = "BatteryWattageWindow";
 const TIMER_ID: usize = 1;
 const TIMER_INTERVAL_MS: u32 = 1000;
 const BATTERY_RETRY_INTERVAL_TICKS: u32 = 5;
@@ -340,8 +340,8 @@ fn replace_icon(hwnd: HWND, app: &mut AppData, label: &str, color: [u8; 4]) {
 }
 
 fn show_about(hwnd: HWND) {
-    let text: Vec<u16> = "Charging Wattage Monitor\n\nShows real-time battery charge/discharge\nwattage in the system tray.\n\nRewritten in Rust\nDirect IOCTL - no WMI, no PowerShell\n\ngithub.com/frankforges/wattage-monitor\0".encode_utf16().collect();
-    let title: Vec<u16> = "About Wattage Monitor\0".encode_utf16().collect();
+    let text: Vec<u16> = "BatteryWattage\n\nShows real-time battery charge/discharge\nwattage in the system tray.\n\nWritten in Rust\nDirect IOCTL - no WMI, no PowerShell\n\ngithub.com/frankforges/BatteryWattage\0".encode_utf16().collect();
+    let title: Vec<u16> = "About BatteryWattage\0".encode_utf16().collect();
     unsafe {
         MessageBoxW(
             hwnd,

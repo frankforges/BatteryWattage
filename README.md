@@ -1,12 +1,12 @@
 <div align="center">
 
-# ⚡ Wattage Monitor
+# ⚡ BatteryWattage
 
 **See exactly how fast your laptop battery is charging — or quietly draining while plugged in.**
 
 A live wattage readout that sits in your Windows system tray as a number, not an icon.
 
-[![Download](https://img.shields.io/badge/download-latest%20release-2ea043?style=for-the-badge)](https://github.com/frankforges/wattage-monitor/releases/latest)
+[![Download](https://img.shields.io/badge/download-latest%20release-2ea043?style=for-the-badge)](https://github.com/frankforges/BatteryWattage/releases/latest)
 [![Platform](https://img.shields.io/badge/windows-10%20%7C%2011-0078d4?style=flat-square)](#requirements)
 [![Size](https://img.shields.io/badge/size-229%20KB-blue?style=flat-square)](#why-its-small)
 [![No installer](https://img.shields.io/badge/install-none%20needed-success?style=flat-square)](#installation)
@@ -45,7 +45,7 @@ Colour tracks state: **green** charging, **amber** discharging, **blue-grey** id
 
 No installer. No dependencies. No admin rights.
 
-1. **[Download `wattage-monitor.exe`](https://github.com/frankforges/wattage-monitor/releases/latest)**
+1. **[Download `BatteryWattage.exe`](https://github.com/frankforges/BatteryWattage/releases/latest)**
 2. Put it anywhere you like
 3. Double-click it
 
@@ -65,7 +65,7 @@ Everything is set from the right-click menu:
 - **Run at startup** — toggles a registry Run entry
 - **About** / **Exit**
 
-For the curious, settings persist at `HKEY_CURRENT_USER\Software\WattageMonitor`:
+For the curious, settings persist at `HKEY_CURRENT_USER\Software\BatteryWattage`:
 
 | Value | Type | Meaning |
 |---|---|---|
@@ -73,7 +73,7 @@ For the curious, settings persist at `HKEY_CURRENT_USER\Software\WattageMonitor`
 | `Background` | dword | `1` background pill on, `0` off |
 | `TextScale` | dword | Font scale percentage |
 
-"Run at startup" writes `WattageMonitor` to `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`.
+"Run at startup" writes `BatteryWattage` to `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`.
 
 Settings follow your Windows user account, not the executable — move the `.exe` and your preferences come with you.
 
@@ -119,7 +119,7 @@ cargo build --release
 cargo test
 ```
 
-The binary lands at `target\release\wattage-monitor.exe`. `.cargo/config.toml` pins static CRT linking so your build is as portable as the released one.
+The binary lands at `target\release\BatteryWattage.exe`. `.cargo/config.toml` pins static CRT linking so your build is as portable as the released one.
 
 ## Licence
 

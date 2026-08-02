@@ -2,7 +2,7 @@ use windows::core::*;
 use windows::Win32::System::Registry::*;
 
 /// Registry path for all config
-const REG_KEY: &str = "Software\\WattageMonitor\0";
+const REG_KEY: &str = "Software\\BatteryWattage\0";
 
 /// Text scale options (font size multiplier as percentage)
 pub const TEXT_SCALES: &[u32] = &[75, 100, 125, 150, 200];
